@@ -66,7 +66,7 @@ function changeBackground(source) {
     var oldImage = document.getElementById("backimageold");
     oldImage.src = image.src;
     oldImage.className = "hover";
-    image.src = `${source}`;
+    image.src = source;
     setTimeout(function() { //Delete old background after transition.
         oldImage.src = "";
     }, 2000);
