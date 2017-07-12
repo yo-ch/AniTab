@@ -3,6 +3,10 @@ Main.
 */
 updateTime();
 setInterval(updateTime, 1000);
+chrome.storage.local.get('wallpaper', function(items) {
+    if (!items.wallpaper) return;
+    document.getElementById("backimage").src = items.wallpaper;
+});
 
 if (window.File && window.FileList && window.FileReader) {
     fileDrag();
@@ -67,7 +71,10 @@ function changeBackground(source) {
     oldImage.src = image.src;
     oldImage.className = "hover";
     image.src = source;
+    chrome.storage.local.set({ 'wallpaper': source });
+
     setTimeout(function() { //Delete old background after transition.
         oldImage.src = "";
+        oldImage.className = "";
     }, 2000);
 }

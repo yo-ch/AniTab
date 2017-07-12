@@ -1,11 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "AniTab",
+  "name": "NewTab!",
   "description": "Displays the current time with a wallpaper in new tabs.",
   "version": "1.0",
 
   "chrome_url_overrides": {
-    "newtab": "aniTab.html"
-  }
+    "newtab": "newtab.html"
+  },
+
+  "permissions": ["storage"]
 }

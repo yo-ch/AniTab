@@ -23,7 +23,7 @@ html {
 }
 
 #backimageold.hover {
-  animation:fadeout 2s;
+  animation: fadeout 2s;
 }
 
 @keyframes fadein {
@@ -43,7 +43,6 @@ html {
     opacity: 0;
   }
 }
-
 
 #clock {
   background-color: rgba(0, 0, 0, 0.5);
@@ -129,5 +128,6 @@ html {
 
 #filedrag.hover {
   background-color: rgba(255, 255, 255, 0.2);
+  cursor: crosshair;
   opacity: 1;
 }
