@@ -24,11 +24,11 @@ html {
 }
 
 #clock {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 460px;
   height: 125px;
   position: absolute;
-  top: 10%;
+  top: 100px;
   left: 50%;
   margin-left: -230px;
   margin-top: -62.5px;
@@ -48,4 +48,38 @@ html {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+#bot {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 135px;
+  height: 37px;
+}
+
+#logo {
+  position: fixed;
+  width: 32px;
+  height: auto;
+  left: 6px;
+  bottom: 1px;
+}
+
+#github {
+  position: fixed;
+  width: 28px;
+  height: auto;
+  left: 49px;
+  bottom: 3px;
+  text-decoration: none;
+}
+
+#settings {
+  position: fixed;
+  width: 32px;
+  height: auto;
+  left: 90px;
+  bottom: 0px;
 }
