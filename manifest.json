@@ -2,7 +2,8 @@
   "manifest_version": 2,
 
   "name": "NewTab!",
-  "description": "Displays the current time with a wallpaper in new tabs.",
+  "short_name": "NT!",
+  "description": "Replaces the new tab screen with a wallpaper and a simple clock.",
   "version": "1.0",
 
   "icons": {
@@ -14,10 +15,15 @@
     "newtab": "newtab.html"
   },
 
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_popup": "options.html"
+  },
+
   "options_ui": {
     "page": "options.html",
     "chrome_style": true
   },
 
-  "permissions": ["storage"]
+  "permissions": ["storage", "unlimitedStorage"]
 }

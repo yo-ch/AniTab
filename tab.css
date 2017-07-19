@@ -8,8 +8,9 @@ html {
   position: fixed;
   left: -50%;
   top: -50%;
-  animation: fadein 2s;
+    animation: auto;
 }
+
 
 #background img {
   position: absolute;
@@ -22,7 +23,7 @@ html {
   min-height: 50%;
 }
 
-#backimageold.hover {
+#backimageold.replace {
   animation: fadeout 2s;
 }
 
@@ -45,12 +46,12 @@ html {
 }
 
 #clock {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   display: inline-block;
   position: fixed;
-  top: 100px;
+  /*top: 100px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%);*/
   animation: fadein 2s;
   text-align: center;
   /*border-radius: 20px;*/

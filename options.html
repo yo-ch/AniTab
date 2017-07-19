@@ -10,39 +10,65 @@
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
-      display:none;
+      display: none;
       -webkit-appearance: none;
       margin: 0;
     }
 
     body {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      height: 335px;
+      width: 280px;
     }
 
+    #status {
+      color: green;
+      position: relative;
+      top: -8px;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    img[src="icon48.png"] {
+      height: 24px;
+      width: auto;
+      position: relative;
+      top: 5px;
+      left: -3px;
+    }
   </style>
 </head>
 
 <body>
   <div>
-    <h1>Clock Settings</h1>
+    <h1><img src="icon48.png"> Clock Settings</h1>
+
     <span>Position:</span>
-    <select name="Vertical Position">
+    <select id="posY" name="Vertical Position">
         <option value="Top">Top</option>
         <option value="Middle">Middle</option>
         <option value="Bottom">Bottom</option>
     </select>
-    <select name="Horizontal Position">
+    <select id="posX" name="Horizontal Position">
         <option value="Left">Left</option>
         <option value="Middle">Middle</option>
         <option value="Right">Right</option>
     </select><br><br>
-    <span>Distance from Edge (px): <input type="number" min="-5000" max="5000" placeholder=""></span> <br><br><br>
-    <span>Clock Font Colour: <input type="color" value=""></span> <br><br>
-    <span>Clock Font Size (px):  <input type="number" min="0" max="999" placeholder=""></span> <br><br>
-    <span>Clock Font Opacity (0-1.0): <input type="number" min="0" max="1" placerholder=""></span> <br><br><br>
-    <span>Clock Background Colour: <input type="color" value=""></span> <br><br>
-    <span>Clock Background Opacity (0-1.0): <input type="number" min="0" max="1" placerholder=""></span> <br><br>
+
+    <label>Distance from Edge (px): <input id="edgeDistance" type="number" min="-5000" max="5000"></label> <br><br><br>
+
+    <label>Clock Font Colour: <input  id="fontColor" type="color"></label> <br><br>
+    <label>Clock Font Size (px):  <input id="fontSize" type="number" min="0" max="999"></label> <br><br>
+    <label>Clock Font Opacity (0-1.0): <input id="fontOpacity" type="number" min="0" max="1"></label> <br><br><br>
+
+    <label>Clock Background Colour: <input id="backgroundColor" type="color"></label> <br><br>
+    <label>Clock Background Opacity (0-1.0): <input id="backgroundOpacity" type="number" min="0" max="1"></label><br><br>
+
+    <button id="save">Save</button><br><br>
+    <div id="status">Options saved.</div>
   </div>
+
+  <script src="options.js"></script>
 </body>
 
 <html>
