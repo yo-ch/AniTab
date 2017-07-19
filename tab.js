@@ -1,13 +1,22 @@
 /*
 Main.
 */
+//Start updating time.
 updateTime();
 setInterval(updateTime, 1000);
+
+//Retrieve set wallpaper.
 chrome.storage.local.get('wallpaper', function(items) {
     if (!items.wallpaper) return;
     document.getElementById("backimage").src = items.wallpaper;
 });
 
+//Adjust margin on clock.
+var time = document.getElementById("time");
+var fontSize = parseInt(time.style.fontSize);
+time.style.margin = `0 ${fontSize/8}px 0 ${fontSize/8}px`;
+
+//Initialize wallpaper setter.
 if (window.File && window.FileList && window.FileReader) {
     fileDrag();
 }

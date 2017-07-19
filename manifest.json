@@ -5,14 +5,19 @@
   "description": "Displays the current time with a wallpaper in new tabs.",
   "version": "1.0",
 
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
 
-  "permissions": ["storage"],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
 
-  "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
-  }
+  "permissions": ["storage"]
 }
