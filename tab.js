@@ -70,6 +70,10 @@ function restoreSettings() {
 
         //Clock position settings.
         background.style.transform = '';
+        background.style.top = '';
+        background.style.bottom = '';
+        background.style.left = '';
+        background.style.right = '';
         switch (items.posY) {
             case 'Top':
                 background.style.top = `${items.edgeDistance}px`;
@@ -81,8 +85,7 @@ function restoreSettings() {
             case 'Bottom':
                 background.style.bottom = `${items.edgeDistance}px`;
                 break;
-        }
-
+        };
         switch (items.posX) {
             case 'Left':
                 background.style.left = `${items.edgeDistance}px`;
@@ -94,7 +97,7 @@ function restoreSettings() {
             case 'Right':
                 background.style.right = `${items.edgeDistance}px`;
                 break;
-        }
+        };
 
         //Clock font settings, and adjust margins.
         var time = get('time');
