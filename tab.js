@@ -14,9 +14,9 @@ function init() {
 
     //Retrieve set wallpaper.
     chrome.storage.local.get('wallpaper', function(items) {
-        var background = get('backimage')
+        var background = get('backimage');
         if (!items.wallpaper)
-            background.src = 'background.png';
+            background.src = 'images/background.png';
         else
             background.src = items.wallpaper;
         background.style.animation = 'fadein 2s'; //Fade in after image has loaded.
